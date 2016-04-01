@@ -2,13 +2,27 @@
 <meta charset="utf-8">
 
 <style>
+h1 {
+  font-weight: normal;
+}
 
-.pie{
+h3 {
+  font-weight: normal;
+}
+
+body {
   padding-top: 50px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   margin: auto;
   position: relative;
+  text-align: center;
   width: 70%;
+}
+
+.pie{
+  font-family: Helvetica, Arial, sans-serif;
+  margin: auto;
+  position: relative;
   text-align: center;
 }
 </style>
@@ -16,7 +30,9 @@
 <html>
 <head></head>
 <body>
+<h1>Vår Shakespearesamling</h1>
 
+<h3>Shakespearepjäser som Paulina och Marina sett tillsammans, och de vi har kvar.</h3>
 <div id="pieChart" class="pie"></div>
 
 <script src="d3.min.js"></script>
@@ -25,17 +41,19 @@
 var pie = new d3pie("pieChart", {
 	"header": {
 		"title": {
-			"text": "Vår Shakespearesamling",
+			"text": "     ",
+      "color": "#000000",
 			"fontSize": 24,
-			"font": "open sans"
+			"font": "helvetica"
 		},
 		"subtitle": {
-			"text": "Shakespearepjäser som Paulina och Marina sett tillsammans, och de vi har kvar.",
+			"text": "    ",
 			"color": "#999999",
-			"fontSize": 12,
-			"font": "open sans"
+			"fontSize": 16,
+			"font": "helvetica"
 		},
-		"titleSubtitlePadding": 9
+    "location": "pie-center",
+		"titleSubtitlePadding": 20
 	},
 	"footer": {
 		"color": "#999999",
@@ -44,9 +62,9 @@ var pie = new d3pie("pieChart", {
 		"location": "bottom-left"
 	},
 	"size": {
-		"canvasWidth": 900,
-    "canvasHeight": 900,
-		"pieOuterRadius": "75%",
+		"canvasWidth": 1000,
+    "canvasHeight": 700,
+		"pieOuterRadius": "90%",
     "pieInnerRadius": "50%"
 	},
 	"data": {
@@ -55,167 +73,220 @@ var pie = new d3pie("pieChart", {
 			{
 				"label": "Som ni vill ha det",
 				"value": 1,
-				"color": "#c2c2f5"
+				"color": "#c2c2f5",
+        "seen" : true,
+        "year" : 2009,
+        "location" : "Romateatern"
 			},
 			{
 				"label": "Stormen",
 				"value": 1,
-				"color": "#c2c2f5"
+				"color": "#c2c2f5",
+        "seen" : true,
+        "year" : 2012,
+        "location" : "Shakespeare på Gräsgården"
 			},
 			{
 				"label": "Julius Caesar",
 				"value": 1,
-				"color": "#c2c2f5"
+				"color": "#c2c2f5",
+        "seen" : true,
+        "year" : 2013,
+        "location" : "Shakespeare på Gräsgården"
+			},
+      {
+				"label": "Trettondagsafton",
+				"value": 1,
+				"color": "#c2c2f5",
+        "seen" : true,
+        "year" : 2014,
+        "location" : "Shakespeare på Gräsgården"
 			},
 			{
 				"label": "Richard III",
 				"value": 1,
-				"color": "#c2c2f5"
+				"color": "#c2c2f5",
+        "seen" : true,
+        "year" : 2014,
+        "location" : "Dramaten"
 			},
 			{
 				"label": "Othello",
 				"value": 1,
-				"color": "#c2c2f5"
+				"color": "#c2c2f5",
+        "seen" : true,
+        "year" : 2015,
+        "location" : "Stadsteatern"
 			},
 			{
 				"label": "Kung Lear",
 				"value": 1,
-				"color": "#c2c2f5"
+				"color": "#c2c2f5",
+        "seen" : true,
+        "year" : 2016,
+        "location" : "Uppsala stadsteater"
 			},
 			{
 				"label": "En midsommarnattsdröm",
 				"value": 1,
-				"color": "#d8d8d8"
+				"color": "#d8d8d8",
+        "seen": false
 			},
 			{
 				"label": "En vintersaga",
 				"value": 1,
-				"color": "#d8d8d8"
+				"color": "#d8d8d8",
+        "seen": false
 			},
 			{
 				"label": "Förvillelser",
 				"value": 1,
-				"color": "#d8d8d8"
+				"color": "#d8d8d8",
+        "seen": false
 			},
 			{
 				"label": "Kärt besvär förgäves",
 				"value": 1,
-				"color": "#d8d8d8"
+				"color": "#d8d8d8",
+        "seen": false
 			},
 			{
 				"label": "Köpmannen i Venedig",
 				"value": 1,
-				"color": "#d8d8d8"
+				"color": "#d8d8d8",
+        "seen": false
 			},
 			{
 				"label": "Lika för lika",
 				"value": 1,
-				"color": "#d8d8d8"
+				"color": "#d8d8d8",
+        "seen": false
 			},
 			{
 				"label": "Muntra fruarna i Windsor",
 				"value": 1,
-				"color": "#d8d8d8"
+				"color": "#d8d8d8",
+        "seen": false
 			},
 			{
 				"label": "Mycket väsen för ingenting",
 				"value": 1,
-				"color": "#d8d8d8"
+				"color": "#d8d8d8",
+        "seen": false
 			},
 			{
 				"label": "Slutet gott, allting gott",
 				"value": 1,
-				"color": "#d8d8d8"
+				"color": "#d8d8d8",
+        "seen": false
 			},
 			{
 				"label": "Så tuktas en argbigga",
 				"value": 1,
-				"color": "#d8d8d8"
+				"color": "#d8d8d8",
+        "seen": false
 			},
 			{
 				"label": "Två ungherrar i Verona",
 				"value": 1,
-				"color": "#d8d8d8"
+				"color": "#d8d8d8",
+        "seen": false
 			},
 			{
 				"label": "Henrik IV",
 				"value": 1,
-				"color": "#d8d8d8"
+				"color": "#d8d8d8",
+        "seen": false
 			},
 			{
 				"label": "Henrik V",
 				"value": 1,
-				"color": "#d8d8d8"
+				"color": "#d8d8d8",
+        "seen": false
 			},
 			{
 				"label": "Henrik VI",
 				"value": 1,
-				"color": "#d8d8d8"
+				"color": "#d8d8d8",
+        "seen": false
 			},
 			{
 				"label": "Henrik VIII",
 				"value": 1,
-				"color": "#d8d8d8"
+				"color": "#d8d8d8",
+        "seen": false
 			},
 			{
 				"label": "Kung John",
 				"value": 1,
-				"color": "#d8d8d8"
+				"color": "#d8d8d8",
+        "seen": false
 			},
 			{
 				"label": "Richard II",
 				"value": 1,
-				"color": "#d8d8d8"
+				"color": "#d8d8d8",
+        "seen": false
 			},
 			{
 				"label": "Antonius och Cleopatra",
 				"value": 1,
-				"color": "#d8d8d8"
+				"color": "#d8d8d8",
+        "seen": false
 			},
 			{
 				"label": "Coriolanus",
 				"value": 1,
-				"color": "#d8d8d8"
+				"color": "#d8d8d8",
+        "seen": false
 			},
 			{
 				"label": "Cymbeline",
 				"value": 1,
-				"color": "#d8d8d8"
+				"color": "#d8d8d8",
+        "seen": false
 			},
 			{
 				"label": "Hamlet",
 				"value": 1,
-				"color": "#d8d8d8"
+				"color": "#d8d8d8",
+        "seen": false
 			},
 			{
 				"label": "Machbeth",
 				"value": 1,
-				"color": "#d8d8d8"
+				"color": "#d8d8d8",
+        "seen": false
 			},
       {
 				"label": "Pericles",
 				"value": 1,
-				"color": "#d8d8d8"
+				"color": "#d8d8d8",
+        "seen": false
 			},
 			{
 				"label": "Romeo och Julia",
 				"value": 1,
-				"color": "#d8d8d8"
+				"color": "#d8d8d8",
+        "seen": false
 			},
 			{
 				"label": "Timon av Aten",
 				"value": 1,
-				"color": "#d8d8d8"
+				"color": "#d8d8d8",
+        "seen": false
 			},
 			{
 				"label": "Titus Andronicus",
 				"value": 1,
-				"color": "#d8d8d8"
+				"color": "#d8d8d8",
+        "seen": false
 			},
       {
 				"label": "Troilus och Cressida",
 				"value": 1,
-				"color": "#d8d8d8"
+				"color": "#d8d8d8",
+        "seen": false
 			}
 		]
 	},
@@ -246,7 +317,7 @@ var pie = new d3pie("pieChart", {
 		}
 	},
 	"tooltips": {
-		"enabled": true,
+		"enabled": false,
 		"type": "placeholder",
 		"string": "{label}"
 	},
@@ -254,7 +325,7 @@ var pie = new d3pie("pieChart", {
 		"pullOutSegmentOnClick": {
 			"effect": "linear",
 			"speed": 200,
-			"size": 10
+			"size": 0
 		}
 	},
 	"misc": {
@@ -263,7 +334,21 @@ var pie = new d3pie("pieChart", {
 			"percentage": 100
 		}
 	},
-	"callbacks": {}
+	"callbacks": {
+    onMouseoverSegment: function(info) {
+      pie.updateProp("header.title.text", info.data.label);
+      if (info.data.seen) {
+        //pie.updateProp("header.title.color", "#000000");
+        pie.updateProp("header.subtitle.text", info.data.year + ", " + info.data.location);
+      } else {
+        //pie.updateProp("header.title.color", "#999999");
+      }
+		},
+		onMouseoutSegment: function(info) {
+      pie.updateProp("header.title.text", "  ");
+      pie.updateProp("header.subtitle.text", "  ");
+		}
+  }
 });
 </script>
 
