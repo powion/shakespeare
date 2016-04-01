@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<style>
+
+.pie{
+  padding-top: 50px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: auto;
+  position: relative;
+  width: 70%;
+  text-align: center;
+}
+</style>
+
+<html>
+<head></head>
+<body>
+
+<div id="pieChart" class="pie"></div>
+
+<script src="d3.min.js"></script>
+<script src="d3pie.min.js"></script>
+<script>
+var pie = new d3pie("pieChart", {
+	"header": {
+		"title": {
+			"text": "Vår Shakespearesamling",
+			"fontSize": 24,
+			"font": "open sans"
+		},
+		"subtitle": {
+			"text": "Shakespearepjäser som Paulina och Marina sett tillsammans, och de vi har kvar.",
+			"color": "#999999",
+			"fontSize": 12,
+			"font": "open sans"
+		},
+		"titleSubtitlePadding": 9
+	},
+	"footer": {
+		"color": "#999999",
+		"fontSize": 10,
+		"font": "open sans",
+		"location": "bottom-left"
+	},
+	"size": {
+		"canvasWidth": 900,
+    "canvasHeight": 900,
+		"pieOuterRadius": "75%",
+    "pieInnerRadius": "50%"
+	},
+	"data": {
+//  "sortOrder": "value-desc",
+		"content": [
+			{
+				"label": "Som ni vill ha det",
+				"value": 1,
+				"color": "#c2c2f5"
+			},
+			{
+				"label": "Stormen",
+				"value": 1,
+				"color": "#c2c2f5"
+			},
+			{
+				"label": "Julius Caesar",
+				"value": 1,
+				"color": "#c2c2f5"
+			},
+			{
+				"label": "Richard III",
+				"value": 1,
+				"color": "#c2c2f5"
+			},
+			{
+				"label": "Othello",
+				"value": 1,
+				"color": "#c2c2f5"
+			},
+			{
+				"label": "Kung Lear",
+				"value": 1,
+				"color": "#c2c2f5"
+			},
+			{
+				"label": "En midsommarnattsdröm",
+				"value": 1,
+				"color": "#d8d8d8"
+			},
+			{
+				"label": "En vintersaga",
+				"value": 1,
+				"color": "#d8d8d8"
+			},
+			{
+				"label": "Förvillelser",
+				"value": 1,
+				"color": "#d8d8d8"
+			},
+			{
+				"label": "Kärt besvär förgäves",
+				"value": 1,
+				"color": "#d8d8d8"
+			},
+			{
+				"label": "Köpmannen i Venedig",
+				"value": 1,
+				"color": "#d8d8d8"
+			},
+			{
+				"label": "Lika för lika",
+				"value": 1,
+				"color": "#d8d8d8"
+			},
+			{
+				"label": "Muntra fruarna i Windsor",
+				"value": 1,
+				"color": "#d8d8d8"
+			},
+			{
+				"label": "Mycket väsen för ingenting",
+				"value": 1,
+				"color": "#d8d8d8"
+			},
+			{
+				"label": "Slutet gott, allting gott",
+				"value": 1,
+				"color": "#d8d8d8"
+			},
+			{
+				"label": "Så tuktas en argbigga",
+				"value": 1,
+				"color": "#d8d8d8"
+			},
+			{
+				"label": "Två ungherrar i Verona",
+				"value": 1,
+				"color": "#d8d8d8"
+			},
+			{
+				"label": "Henrik IV",
+				"value": 1,
+				"color": "#d8d8d8"
+			},
+			{
+				"label": "Henrik V",
+				"value": 1,
+				"color": "#d8d8d8"
+			},
+			{
+				"label": "Henrik VI",
+				"value": 1,
+				"color": "#d8d8d8"
+			},
+			{
+				"label": "Henrik VIII",
+				"value": 1,
+				"color": "#d8d8d8"
+			},
+			{
+				"label": "Kung John",
+				"value": 1,
+				"color": "#d8d8d8"
+			},
+			{
+				"label": "Richard II",
+				"value": 1,
+				"color": "#d8d8d8"
+			},
+			{
+				"label": "Antonius och Cleopatra",
+				"value": 1,
+				"color": "#d8d8d8"
+			},
+			{
+				"label": "Coriolanus",
+				"value": 1,
+				"color": "#d8d8d8"
+			},
+			{
+				"label": "Cymbeline",
+				"value": 1,
+				"color": "#d8d8d8"
+			},
+			{
+				"label": "Hamlet",
+				"value": 1,
+				"color": "#d8d8d8"
+			},
+			{
+				"label": "Machbeth",
+				"value": 1,
+				"color": "#d8d8d8"
+			},
+      {
+				"label": "Pericles",
+				"value": 1,
+				"color": "#d8d8d8"
+			},
+			{
+				"label": "Romeo och Julia",
+				"value": 1,
+				"color": "#d8d8d8"
+			},
+			{
+				"label": "Timon av Aten",
+				"value": 1,
+				"color": "#d8d8d8"
+			},
+			{
+				"label": "Titus Andronicus",
+				"value": 1,
+				"color": "#d8d8d8"
+			},
+      {
+				"label": "Troilus och Cressida",
+				"value": 1,
+				"color": "#d8d8d8"
+			}
+		]
+	},
+	"labels": {
+		"outer": {
+			"pieDistance": 40
+		},
+		"inner": {
+			"format": "none",
+			"hideWhenLessThanPercentage": 3
+		},
+		"mainLabel": {
+			"fontSize": 11
+		},
+		"percentage": {
+			"color": "#ffffff",
+			"decimalPlaces": 0
+		},
+		"value": {
+			"color": "#adadad",
+			"fontSize": 11
+		},
+		"lines": {
+			"enabled": true
+		},
+		"truncation": {
+			"enabled": true
+		}
+	},
+	"tooltips": {
+		"enabled": true,
+		"type": "placeholder",
+		"string": "{label}"
+	},
+	"effects": {
+		"pullOutSegmentOnClick": {
+			"effect": "linear",
+			"speed": 200,
+			"size": 10
+		}
+	},
+	"misc": {
+		"gradient": {
+			"enabled": true,
+			"percentage": 100
+		}
+	},
+	"callbacks": {}
+});
+</script>
+
+</body>
+</html>
