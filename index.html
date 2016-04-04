@@ -344,6 +344,7 @@ var pie = new d3pie("pieChart", {
         pie.updateProp("header.subtitle.text", info.data.year + ", " + info.data.location);
       } else {
         //pie.updateProp("header.title.color", "#999999");
+        pie.updateProp("header.subtitle.text", "  ");
       }
 		},
 		onMouseoutSegment: function(info) {
